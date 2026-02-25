@@ -119,23 +119,4 @@
             }
         });
 
-        // Contact form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Simple validation
-            if (name && email && message) {
-                // Show success message (in a real application, you'd send this to a server)
-                alert('Thank you for your message! I\'ll get back to you soon.');
-                
-                // Reset form
-                this.reset();
-            } else {
-                alert('Please fill in all fields.');
-            }
-        });
+        
