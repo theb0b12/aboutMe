@@ -703,6 +703,8 @@ body {
     border: 1px solid rgba(59, 130, 246, 0.2);
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
 }
 
 .contact-item::before {
