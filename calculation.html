@@ -1,21 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Calculation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Easter Egg</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-specific overrides for this standalone doc */
+        body {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 80px 24px;
+        }
+
+        .calc-doc {
+            max-width: 620px;
+            width: 100%;
+        }
+
+        .calc-doc h1 {
+            font-family: var(--font-serif);
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--c-ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .calc-doc .subtitle {
+            font-size: 0.875rem;
+            color: var(--c-muted);
+            margin-bottom: 2.5rem;
+            font-style: italic;
+        }
+
+        /* Assumption table */
+        .calc-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid var(--c-rule);
+            margin-bottom: 2.5rem;
+            font-size: 0.9375rem;
+        }
+
+        .calc-table th {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--c-muted);
+            background: var(--c-bg-alt);
+            padding: 0.6rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--c-rule);
+        }
+
+        .calc-table td {
+            padding: 0.65rem 1rem;
+            border-bottom: 1px solid var(--c-rule);
+            color: var(--c-body);
+            vertical-align: top;
+        }
+
+        .calc-table tr:last-child td { border-bottom: none; }
+
+        .calc-table td:first-child {
+            font-weight: 600;
+            color: var(--c-ink);
+            white-space: nowrap;
+        }
+
+        /* Math display block */
+        .math-block {
+            background: var(--c-surface);
+            border: 1px solid var(--c-rule);
+            border-left: 3px solid var(--c-accent);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9375rem;
+            color: var(--c-body);
+            line-height: 2;
+        }
+
+        .math-block .math-line {
+            display: block;
+        }
+
+        .math-block .math-line--indent {
+            padding-left: 1.5rem;
+        }
+
+        .math-block .math-result {
+            display: block;
+            margin-top: 0.5rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--c-rule);
+            font-weight: bold;
+            color: var(--c-ink);
+            font-size: 1.0625rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-size: 0.875rem;
+            color: var(--c-muted);
+            border-bottom: 1px solid var(--c-rule);
+            padding-bottom: 2px;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--c-ink);
+            border-bottom-color: var(--c-ink);
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="about-text">
-    <h1>How the number was calculated</h1>
-    <p>
-        (12 students × 18 weeks + 20 students × 10 summer weeks) × 3 years
-    </p>
+    <div class="calc-doc">
+        
 
-    <p>
-        = (216 + 200) × 3  
-        = 416 × 3  
-        = <strong>1248 students</strong>
-    </p>
+
+        <h2 style="font-family: var(--font-serif); font-size: 1rem; font-weight: 700; color: var(--c-ink); margin-bottom: 1rem;">Calculation</h2>
+        <div class="math-block">
+            <span class="math-line">( 12 students × 18 weeks )  +  ( 20 students × 10 summer weeks )</span>
+            <span class="math-line math-indent" style="padding-left:1.5rem">= 216  +  200</span>
+            <span class="math-line math-indent" style="padding-left:1.5rem">= 416 students per year</span>
+            <span class="math-result">416 × 3 years  =  <strong>1,248 students</strong></span>
+        </div>
+
+        <p style="font-size: 0.875rem; color: var(--c-muted); font-style: italic;">
+            Note: Individual students may have attended multiple sessions. This figure represents total student-sessions, not unique individuals.
+        </p>
     </div>
 </body>
 </html>
