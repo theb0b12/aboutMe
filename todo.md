@@ -9,3 +9,5 @@
     - [ ] 2 blades of dawn
     - [ ] 3 b0bqol
 - [ ] make css less AI
+- [ ] add copy button to email
+- [ ] remove ai logos from Get in Touch section
